@@ -2,6 +2,8 @@ import React from 'react';
 import Dropdown from './Dropdown';
 import Search from './Search';
 import Sections from './Sections';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const listDropdown = ["Cosmic Sea", "Caudritos", "Animalitos", "Bestiario", "Luna Mística", "Fantasy"] 
