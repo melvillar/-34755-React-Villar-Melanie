@@ -2,8 +2,8 @@ import React from 'react';
 import Dropdown from './Dropdown';
 import Search from './Search';
 import Sections from './Sections';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 
 const Navbar = () => {
   const listDropdown = ["Cosmic Sea", "Caudritos", "Animalitos", "Bestiario", "Luna Mística", "Fantasy"] 
