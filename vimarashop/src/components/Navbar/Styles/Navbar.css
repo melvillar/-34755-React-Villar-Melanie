@@ -1,7 +1,12 @@
-.cart-widget {
+/*Cart */
+.cart{
     position: relative;
     cursor: pointer;
     text-align: center;
+    color: #c7319d;
+    padding-right: 2rem;
+    font-size: 2rem;
+
 }
 
 .qty-display {
@@ -15,3 +20,13 @@
     text-align: center;
     line-height: 17px;
 }
+
+/*CartItem */
+.grillaProducts{
+    width: 100vw;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 12.5rem 12.5rem 12.5rem;
+    grid-template-rows: 9.375rem 9.375rem;
+}
+/*CartItem */
