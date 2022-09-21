@@ -19,10 +19,10 @@ const CartItem = () => {
     </div>
   </div>
   <div className="card border-success mb-3">
-    <div className="card-header">TAMAÑOS PERSONALIZADOS</div>
+    <div className="card-header">TODOS LOS TAMAÑOS</div>
     <div className="card-body">
       <h4 className="card-title">Animalitos</h4>
-      <p className="card-text">Papel hectográfico para tatuaje; diseño manual</p>
+      <p className="card-text">Papel hectográfico para tatuaje</p>
     </div>
   </div>
   <div className="card border-danger mb-3">
