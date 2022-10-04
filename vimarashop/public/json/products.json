@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "nombre": "Cosmic Sea",
+        "detalle": "Acrílico y tinta",
+        "precio": "$500",
+        "stock": "10",
+        "imagen": "cosmicsea.jpeg"
+    },
+    {
+        "id": "2",
+        "nombre": "Cuadritos",
+        "detalle": "Acrílico y resina",
+        "precio": "$400",
+        "stock": "15",
+        "imagen": "cuadritos.jpeg"
+    },
+    {
+        "id": "3",
+        "nombre": "Animalitos",
+        "detalle": "Papel hectográfico para tatuaje",
+        "precio": "$600",
+        "stock": "5",
+        "imagen": "animalito.jpeg"
+    },
+    {
+        "id": "4",
+        "nombre": "Fantasy",
+        "detalle": "Tinta, rotulador, pan de oro",
+        "precio": "$700",
+        "stock": "10",
+        "imagen": "fantasy.jpeg"
+    },
+    {
+        "id": "5",
+        "nombre": "Bestiario",
+        "detalle": "Tinta, rotulador y estilógrafo",
+        "precio": "$1100",
+        "stock": "5",
+        "imagen": "bestiario.jpeg"
+    },
+    {
+        "id": "6",
+        "nombre": "Luna Mística",
+        "detalle": "Tinta y rotulador",
+        "precio": "$700",
+        "stock": "8",
+        "imagen": "lunamistica.jpeg"
+    }
+]

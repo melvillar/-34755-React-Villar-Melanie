@@ -16,4 +16,4 @@ const Search = ({busqueda}) => {
     );
 }
 
-export default Search;
+export default Form;
