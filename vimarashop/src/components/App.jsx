@@ -1,14 +1,30 @@
-import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from './content/Navbar';
-import CartItem from './content/CartItem';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used borrar esto
+import ItemContainer from './content/ItemContainer'
+import Item from './content/Item'
+import Footer from './content/Footer'
+import Contacto from './content/Contacto'
+import Cart from './content/Cart'
+import About from './content/About'
+import Category from './content/Category'
+import Sections from './content/Sections'
 
 const App = () => {
+
     return (
         <>
-        <Navbar></Navbar>
-        <CartItem></CartItem>
+            <BrowserRouter>
+                <Navbar/>
+                <Routes>
+                    <Route path="/" element={<ItemContainer/>} />
+                    <Route path="/products/:id" element={<Item/>} />
+                    <Route path="/contacto" element={<Contacto/>} />
+                    <Route path="/Cart" element={<Cart/>} />
+                    <Route path="/About" element={<About/>} />
+                    <Route path="/Category" element={<Category/>} />
+                </Routes>
+                <Footer/>
+            </BrowserRouter>
         </>
     );
 }

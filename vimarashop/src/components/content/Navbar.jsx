@@ -1,5 +1,7 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import Dropdown from '../layout/Dropdown';
+import Search from '../layout/Search'
+import Sections from './Sections'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 
@@ -14,9 +16,10 @@ const Navbar = () => {
             </button>
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto">
-              
+              <Sections></Sections>
+              <Dropdown lista = {listDropdown}></Dropdown>
             </ul>
-    
+            <Search busqueda= "Buscar Colecciones"></Search>
           </div>
         </div> 
       </nav>          
