@@ -11,7 +11,7 @@ const Category = () => {
     const {id} = useParams()
     useEffect(() => {
         consultarBDD('../json/productos.json').then(productos => {
-            const productosCategoria = productos.filter(producto => producto.idCategoria === parseInt(id) )
+            const productosCategoria = productos.filter(producto => producto.categoria === parseInt(id) )
             console.log(productosCategoria)
             const cardProducto = productosCategoria.map(producto => 
                 <div className="card cardProducto" key={producto.id}>

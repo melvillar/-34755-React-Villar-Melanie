@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "idCategoria": "A color",
+        "categoria": "A color",
         "nombre": "Cosmic Sea",
         "detalle": "Acrílico y tinta",
         "precio": "$500",
@@ -10,7 +10,7 @@
     },
     {
         "id": "2",
-        "idCategoria": "A color",
+        "categoria": "A color",
         "nombre": "Cuadritos",
         "detalle": "Acrílico y resina",
         "precio": "$400",
@@ -19,7 +19,7 @@
     },
     {
         "id": "3",
-        "idCategoria": "Blanco y Negro",
+        "categoria": "Blanco y Negro",
         "nombre": "Animalitos",
         "detalle": "Papel hectográfico para tatuaje",
         "precio": "$600",
@@ -28,7 +28,7 @@
     },
     {
         "id": "4",
-        "idCategoria": "Blanco y Negro",
+        "categoria": "Blanco y Negro",
         "nombre": "Fantasy",
         "detalle": "Tinta, rotulador, pan de oro",
         "precio": "$700",
@@ -37,7 +37,7 @@
     },
     {
         "id": "5",
-        "idCategoria": "Blanco y Negro",
+        "categoria": "Blanco y Negro",
         "nombre": "Bestiario",
         "detalle": "Tinta, rotulador y estilógrafo",
         "precio": "$1100",
@@ -46,7 +46,7 @@
     },
     {
         "id": "6",
-        "idCategoria": "A color",
+        "categoria": "A color",
         "nombre": "Luna Mística",
         "detalle": "Tinta y rotulador",
         "precio": "$700",
