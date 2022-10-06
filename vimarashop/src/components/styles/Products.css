@@ -16,11 +16,37 @@
     justify-content: center;
 }
 .imgDetalle{
-    width: 20rem;
-    margin: 4px;
+    height: 21.438rem;
+    width: 21.813rem;
+    left: 4.875rem;
+    top: 15.25rem;
+    margin: 2rem;
+    object-fit: cover;
+}
+.imgDetalle:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); 
 }
 .detalle{
-    size: 4rem;
-    margin: 10px;
-    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-top: 4.5rem;
+    margin: 2rem;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.contenedorDetalle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-center;
+    align-items: stretch;
+    align-content: stretch; 
 }

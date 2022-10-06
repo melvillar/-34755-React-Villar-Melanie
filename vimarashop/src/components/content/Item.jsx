@@ -31,19 +31,17 @@ useEffect(() => {
         <>
             {
                 producto ? (
-                    <div className="row g-0">
-                        <div className="col-md-4">
-                            <img src={`../assets/${producto.imagen}`}  className="img-fluid rounded-start imgDetalle" alt="..." />
-                        </div>
-                        <div className="col-md-8">
-                            <div className="card-body detalle">
-                                    <h5 className="card-title">{producto.nombre}</h5>
-                                    <p className="card-text">{producto.precio}</p>
-                                    <p className="card-text">{producto.stock}</p>
-                                    <button className='btn btn-dark'>Agregar</button>
-                            </div>
-                        </div>
-                    </div>  
+                    <section className="contenedorDetalle">
+                    <div className="imgDetalle">
+                        <img src={`../assets/${producto.imagen}`}  className="img-fluid rounded-start imgDetalle" alt="..." />
+                    </div>
+                    <div className="detalle">
+                        <h1 className="card-title">{producto.nombre}</h1>          
+                        <p className="card-text"> Precio: {producto.precio}</p>
+                        <p className="card-text"> Stock disponible: {producto.stock}</p>
+                        <button className='btn btn-dark'>Agregar</button>
+                    </div>
+                </section> 
 
                 ): <h1>Loading...</h1>
             }
