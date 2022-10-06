@@ -1,9 +1,26 @@
 .cartImg{
-    height: 250px;
-    width: 250px;
+    height: 16rem;
+    width: 16rem;
     object-fit: cover;
 }
 .cardProducto {
     width: 20rem;
     margin: 6px;
+    
+}
+.cardDetalle{
+    display: flex;
+    width: 30rem;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.imgDetalle{
+    width: 20rem;
+    margin: 4px;
+}
+.detalle{
+    size: 4rem;
+    margin: 10px;
+    text-align: justify;
 }
