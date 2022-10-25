@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 
 const Contador = () => {
 
-const [contador, setContador] = useState(0);
+    const [contador, setContador] = useState(0);
     
-function modificarContador(operacion) {
+    function modificarContador(operacion) {
         if(operacion == "+") {
-            setContador(contador + 1) 
+            setContador(contador + 1)
         } else {
             if(contador > 1) {
                 setContador(contador - 1)
@@ -14,12 +14,11 @@ function modificarContador(operacion) {
             
         }
     }
-
-return (
+    return (
         <>
-            <button onClick={() => modificarContador("+")} className='btn btn-dark'>Sumar</button>
+            <button onClick={() => modificarContador("+")} className='btn btn-dark'>+</button>
                 {contador}
-            <button onClick={() => modificarContador("-")} className='btn btn-light'>Restar</button>
+            <button onClick={() => modificarContador("-")} className='btn btn-light'>-</button>
         </>
     );
 }

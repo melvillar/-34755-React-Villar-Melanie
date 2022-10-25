@@ -1,26 +1,25 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import { useParams, Link } from 'react-router-dom';
-
-const consultarBDD = async (ruta) => {
-    const response = await fetch(ruta)
-    const productos = await response.json()
-    return productos
-}
+import { consultarBDD } from '../../service/functions';
+import { DarkModeContext } from '../../context/DarkModeContext';
 const Category = () => {
+
     const [productos, setProductos] = useState([]);
     const {id} = useParams()
+    const {darkMode} = useContext(DarkModeContext);
     useEffect(() => {
-        consultarBDD('../json/productos.json').then(productos => {
-            const productosCategoria = productos.filter(producto => producto.categoria === parseInt(id) )
+        consultarBDD('../json/products.json').then(productos => {
+            const productosCategoria = productos.filter(producto => producto.idCategoria === parseInt(id) )
             console.log(productosCategoria)
             const cardProducto = productosCategoria.map(producto => 
                 <div className="card cardProducto" key={producto.id}>
-                    <img src={"../assets/" + producto.imagen} className="card-img-top" alt={producto.nombre} />
+                    <img src={"../imagen/" + producto.imagen} className="card-img-top" alt={producto.nombre} />
                         <div className="card-body">
                             <h5 className="card-title">{producto.nombre}</h5>
+                            <p className="card-text">Detalle: {producto.detalle}</p>
                             <p className="card-text">Precio: {producto.precio}</p>
                             <p className="card-text">Stock: {producto.stock}</p>
-                            <button className='btn btn-dark'><Link className='nav-link' to={`/products/${producto.id}`}>Ver Producto</Link></button>
+                            <button className='btn btn-dark'><Link className='nav-link' to={`/producto/${producto.id}`}>Ver Diseño</Link></button>
                     </div>
                 </div>)
             
@@ -28,9 +27,10 @@ const Category = () => {
         })
     }, [id]);
     return (
-        <div className="row">
-            {productos}
-        </div>
+        <div className={darkMode ? 'darkMode row' : 'row'}>
+            {productos}     
+            
+        </div>      
             
         
     );

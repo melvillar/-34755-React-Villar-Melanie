@@ -1,37 +1,26 @@
-import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom'
-import "../styles/Products.css"
+import React, {useState, useEffect, useContext} from 'react';
+import Item from './Item'
+import { useParams } from 'react-router-dom';
+import { consultarBDD } from '../../service/functions';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
-const consultarBDD = async (ruta) => {
-    const response = await fetch(ruta)
-    const productos = await response.json()
-    return productos
-}
 const ItemContainer = () => {
-    const [productos, setProductos] = useState([]);
+    const [producto, setProducto] = useState([]);
+    const {id} = useParams()
+    const {darkMode} = useContext(DarkModeContext);
     useEffect(() => {
-        consultarBDD('./json/products.json').then(productos => {
-            const cardProducto = productos.map(producto => 
-                <div className="card cardProducto row g-0" key={producto.id}>
-                    <img src={"./assets/" + producto.imagen} className="card-img-top cartImg" alt={producto.nombre} />
-                        <div className="card-body">
-                            <h5 className="card-title">{producto.nombre}</h5>
-                            <p className="card-text">Precio: {producto.precio}</p>
-                            <p className="card-text">Stock: {producto.stock}</p>
-                            <button className='btn btn-dark'><Link className='nav-link' to={`/products/${producto.id}`}>Ver Diseño</Link></button>
-                    </div>
-                </div>)
-            
-            setProductos(cardProducto)
-            })
-    }, []);
+        consultarBDD('../json/products.json').then(productos => {
+        const producto1 = productos.find(productoArray => productoArray.id == id)
+        setProducto(producto1)
+    })
 
+    }, [])
 
     return (
-        <div className="row">
-            {productos}     
-        </div>      
         
+            <div className={darkMode ? 'darkMode card mb-3' : 'card mb-3'} style={{maxWidth: '540px'}}>
+                <Item producto={producto}/>
+            </div>
     );
 }
 
