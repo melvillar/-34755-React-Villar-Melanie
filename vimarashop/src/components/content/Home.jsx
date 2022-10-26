@@ -11,7 +11,7 @@ const Home = () => {
         consultarBDD('./json/products.json').then(productos => {
             const cardProducto = productos.map(producto => 
                 <div className="card cardProducto" key={producto.id}>
-                    <img src={"./imagen/" + producto.imagen} className="card-img-top" alt={producto.nombre} />
+                    <img src={"./assets/" + producto.imagen} className="card-img-top" alt={producto.nombre} />
                         <div className="card-body">
                             <h5 className="card-title">{producto.nombre}</h5>
                             <p className="card-text">Detalle: {producto.detalle}</p>
