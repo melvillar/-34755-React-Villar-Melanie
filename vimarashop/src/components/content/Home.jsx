@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import { consultarBDD } from '../../service/functions';
 import { DarkModeContext } from '../../context/DarkModeContext';
 import {Link} from 'react-router-dom'
+import "../styles/Products.css"
 
 const Home = () => {
     const [productos, setProductos] = useState([]);
@@ -10,7 +11,7 @@ const Home = () => {
     useEffect(() => {
         consultarBDD('./json/products.json').then(productos => {
             const cardProducto = productos.map(producto => 
-                <div className="card cardProducto" key={producto.id}>
+                <div className="card cardProducto row g-0" key={producto.id}>
                     <img src={"./assets/" + producto.imagen} className="card-img-top" alt={producto.nombre} />
                         <div className="card-body">
                             <h5 className="card-title">{producto.nombre}</h5>

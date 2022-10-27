@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { CartContext } from '../../context/CartContext';
+import "../styles/Products.css"
 
 const Item = ({producto}) => {
     const [cantidad, setCantidad] = useState(1);
@@ -19,29 +20,29 @@ const Item = ({producto}) => {
     }
     return (
         <>
-        
-    <div className="row g-0">
-    <div className="col-md-4">
-        <img src={`../imagen/${producto.imagen}`} className="img-fluid rounded-start" alt="..." />
-    </div>
-    <div className="col-md-8">
-        <div className="card-body">
-        <h5 className="card-title">{producto.nombre}</h5>
-        <p className="card-text">{producto.detalle}</p>
-        <p className="card-text">{producto.precio}</p>
-        <p className="card-text">{producto.stock}</p>
-        <p className='card-text'>{cantidad}</p>
-        <button className='btn btn-light' onClick={() => cantProducto("+")}>+</button>
+            {
+                producto ? (
+                    <section className="contenedorDetalle">
+                    <div className="imgDetalle">
+                        <img src={`../assets/${producto.imagen}`}  className="img-fluid rounded-start imgDetalle" alt="..." />
+                    </div>
+                    <div className="detalle">
+                        <h1 className="card-title">{producto.nombre}</h1>          
+                        <p className="card-text"> Precio: {producto.precio}</p>
+                        <p className="card-text"> Stock disponible: {producto.stock}</p>
+                        <p className='card-text'>{cantidad}</p>
+                        <button className='btn btn-light' onClick={() => cantProducto("+")}>+</button>
+                        <button className='btn btn-dark' onClick={() => cantProducto("-")}>-</button>
 
-        <button className='btn btn-dark' onClick={() => cantProducto("-")}>-</button>
+                        <button className='btn btn-dark'>Agregar</button>
+                    </div>
+                </section> 
 
-        <button className='btn btn-dark' onClick={() => agregarProducto(producto, cantidad) }>Agregar Diseño</button>
-        </div>
-        </div>
-    </div>
-
+                ): <h1>Loading...</h1>
+            }
         </>
     );
+
 }
 
 export default Item;

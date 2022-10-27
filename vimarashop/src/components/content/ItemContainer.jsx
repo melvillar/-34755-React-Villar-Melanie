@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import Item from './Item'
 import { useParams } from 'react-router-dom';
 import { consultarBDD } from '../../service/functions';
+import "../styles/Products.css"
 import { DarkModeContext } from '../../context/DarkModeContext';
 
 const ItemContainer = () => {
@@ -17,10 +18,9 @@ const ItemContainer = () => {
     }, [])
 
     return (
-        
-            <div className={darkMode ? 'darkMode card mb-3' : 'card mb-3'} style={{maxWidth: '540px'}}>
-                <Item producto={producto}/>
-            </div>
+        <div className="row">
+            {producto}     
+        </div>      
     );
 }
 
