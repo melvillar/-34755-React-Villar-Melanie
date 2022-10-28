@@ -28,9 +28,9 @@ const Contacto = () => {
             <input type="email" className="form-control" name="email"  />
         </div>
         <div className="mb-3">
-            <textarea name="consulta" rows={10} cols={50} defaultValue={"Escribi su consulta aqui"} />
+            <textarea name="consulta" rows={10} cols={50} defaultValue={"Dejame tu pedido"} />
         </div>
-            <button type="submit" className="btn btn-primary">Solicitar info</button>
+            <button type="submit" className="btn btn-primary">Cotizar Diseño</button>
         </form>
             </div>
             

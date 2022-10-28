@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import { CartContext } from '../../context/CartContext';
-import { mostrarCarrito } from '../../service/functions';
+import { mostrarCarrito } from './../service/functions';
 
 const Cart = () => {
     const {carrito, agregarProducto, quitarProducto} = useContext(CartContext)
@@ -9,7 +9,7 @@ const Cart = () => {
     useEffect(() => {
         const prodMostrar  = carrito.map(producto => 
             <div className="card cardProducto" key={producto.id}>
-                    <img src={"./assets/" + producto.imagen} className="card-img-top" alt={producto.nombre} />
+                    <img src={producto.img} className="card-img-top" alt={producto.nombre} />
                         <div className="card-body">
                             <h5 className="card-title">{producto.nombre}</h5>
                             <p className="card-text">Precio: {producto.precio}</p>
